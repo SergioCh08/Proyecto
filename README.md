@@ -24,13 +24,13 @@ puntuacion_cancion = int()
 input("Del 1 al 10, ¿qué tanto te gusta esta canción? ")
 
 
-# Calcular el puntaje de compatibilidad
+Calcular el puntaje de compatibilidad
 puntaje = gusto_genero * puntuacion_cancion
 
-# Calcular el puntaje máximo posible
+Calcular el puntaje máximo posible
 puntaje_maximo = 10 * 10
 
-# Calcular el porcentaje de compatibilidad
+Calcular el porcentaje de compatibilidad
 porcentaje = (puntaje / puntaje_maximo) * 100
 
 print("Género seleccionado:", genero)
