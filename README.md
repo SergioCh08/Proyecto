@@ -57,18 +57,25 @@ porcentaje = (puntaje / puntaje_maximo) * 100
 # Avance 3
 
 def recomendar(cancion1, cancion2, cancion3, cancion4, cancion5, cancion6, cancion7):
+
     if cancion1 >= cancion2 and cancion1 >= cancion3 and cancion1 >= cancion4 and cancion1 >= cancion5 and cancion1 >= cancion6 and cancion1 >= cancion7:
-        return "La canción 1 fue la que más te gustó"
+    return "La canción 1 fue la que más te gustó"
+        
     elif cancion2 >= cancion1 and cancion2 >= cancion3 and cancion2 >= cancion4 and cancion2 >= cancion5 and cancion2 >= cancion6 and cancion2 >= cancion7:
         return "La canción 2 fue la que más te gustó"
+        
     elif cancion3 >= cancion1 and cancion3 >= cancion2 and cancion3 >= cancion4 and cancion3 >= cancion5 and cancion3 >= cancion6 and cancion3 >= cancion7:
         return "La canción 3 fue la que más te gustó"
+        
     elif cancion4 >= cancion1 and cancion4 >= cancion2 and cancion4 >= cancion3 and cancion4 >= cancion5 and cancion4 >= cancion6 and cancion4 >= cancion7:
         return "La canción 4 fue la que más te gustó"
+        
     elif cancion5 >= cancion1 and cancion5 >= cancion2 and cancion5 >= cancion3 and cancion5 >= cancion4 and cancion5 >= cancion6 and cancion5 >= cancion7:
         return "La canción 5 fue la que más te gustó"
+        
     elif cancion6 >= cancion1 and cancion6 >= cancion2 and cancion6 >= cancion3 and cancion6 >= cancion4 and cancion6 >= cancion5 and cancion6 >= cancion7:
         return "La canción 6 fue la que más te gustó"
+        
     else:
         return "La canción 7 fue la que más te gustó"
 
