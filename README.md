@@ -42,18 +42,6 @@ INICIO.
     
 FIN.
 
-# Avance 2
-
-puntaje_total = p1 + p2 + p3 + p4 + p5 + p6 + p7
-
-promedio = puntaje_total / 7
-
-puntaje_final = promedio * 10
-
-puntaje_maximo = 10 * 10
-
-porcentaje = (puntaje / puntaje_maximo) * 100
-
 
 # Resultado esperado
 El programa deberá mostrar una lista de canciones que coincidan con los gustos musicales que el usuario haya seleccionado.
