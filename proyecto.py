@@ -1,6 +1,5 @@
 # AVANCE 1: Selección de proyecto
 # Proyecto Libre: RECOMENDADOR MUSICAL
-
 print("RECOMENDADOR MUSICAL")
 
 # AVANCE 3: Incorpora a tu proyecto libre uso de funciones
@@ -17,7 +16,6 @@ def calcular_compatibilidad(
 
 # AVANCE 2: Incorpora a tu proyecto libre operaciones con operadores
 # (Operadores aritméticos y lógicos para el cálculo de compatibilidad)
-
 # Suma puntos si el género principal coincide
     if genero_cancion == genero_usuario:
         puntuacion = puntuacion + 4
@@ -50,7 +48,6 @@ def mostrar_recomendacion(
     nombre_cancion,
     artista_cancion,
     puntuacion):
-
     print("\n----------------------------------------")
     print("¡Canción recomendada para ti!")
     print(nombre_cancion, "-", artista_cancion)
@@ -64,6 +61,14 @@ print("Hola,", nombre + "!")
 # AVANCE 6: Incorpora a tu proyecto libre listas (arreglos)
 # (Creación de la lista 'historial_recomendaciones')
 historial_recomendaciones = []
+
+# AVANCE 7: Incorpora a tu proyecto libre listas anidadas (matrices)
+# (Matriz que almacena información detallada del catálogo de canciones: [Nombre, Género, Artista, Mood])
+catalogo_detalles = [
+    ["Espresso", "Pop", "Sabrina Carpenter", "Fiesta"],
+    ["Mantra", "K-Pop", "Jennie", "Energico"],
+    ["One Of The Girls", "R&B", "The Weeknd", "Relajado"]
+]
 
 # AVANCE 5: Incorpora a tu proyecto libre estructuras de repetición (ciclos)
 # (Ciclo while para permitir repetir el recomendador)
@@ -99,7 +104,6 @@ while continuar.lower() == "si" or continuar.lower() == "sí":
     print("2. K-Pop")
     print("3. R&B")
     print("4. Afrobeats")
-
     opcion = int(input("Selecciona una opción (1-4): "))
     if opcion == 1:
         segundo_genero = "Pop"
@@ -121,7 +125,6 @@ while continuar.lower() == "si" or continuar.lower() == "sí":
     print("4. Jennie")
     print("5. Billie Eilish")
     print("6. Ninguno en especial")
-
     opcion = int(input("Selecciona una opción (1-6): "))
     if opcion == 1:
         artista_usuario = "Sabrina Carpenter"
@@ -142,7 +145,6 @@ while continuar.lower() == "si" or continuar.lower() == "sí":
     print("2. Para fiesta")
     print("3. Relajada")
     print("4. Romántica")
-
     opcion = int(input("Selecciona una opción (1-4): "))
     if opcion == 1:
         mood_usuario = "Energico"
@@ -165,7 +167,6 @@ while continuar.lower() == "si" or continuar.lower() == "sí":
         segundo_genero,
         artista_usuario,
         mood_usuario)
-
     cancion2 = calcular_compatibilidad(
         "K-Pop",
         "Jennie",
@@ -174,7 +175,6 @@ while continuar.lower() == "si" or continuar.lower() == "sí":
         segundo_genero,
         artista_usuario,
         mood_usuario)
-
     cancion3 = calcular_compatibilidad(
         "R&B",
         "The Weeknd",
@@ -198,13 +198,11 @@ while continuar.lower() == "si" or continuar.lower() == "sí":
         artista_cancion_rec = "Sabrina Carpenter"
         puntaje_rec = cancion1
         mostrar_recomendacion(nombre_cancion_rec, artista_cancion_rec, puntaje_rec)
-
     elif cancion2 >= cancion1 and cancion2 >= cancion3:
         nombre_cancion_rec = "Mantra"
         artista_cancion_rec = "Jennie"
         puntaje_rec = cancion2
         mostrar_recomendacion(nombre_cancion_rec, artista_cancion_rec, puntaje_rec)
-
     else:
         nombre_cancion_rec = "One Of The Girls"
         artista_cancion_rec = "The Weeknd"
@@ -216,6 +214,13 @@ while continuar.lower() == "si" or continuar.lower() == "sí":
 
 # Preguntar al usuario si desea realizar otra consulta para el control del ciclo while
     continuar = input("¿Te gustaría buscar otra recomendación musical? (sí/no): ")
+
+# AVANCE 7: Recorrer la lista anidada (matriz) utilizando un ciclo anidado
+print("\n========================================")
+print("INFORMACIÓN GENERAL DEL CATÁLOGO (MATRIZ):")
+print("========================================")
+for fila in catalogo_detalles:
+    print("Canción:", fila[0], "| Género:", fila[1], "| Artista:", fila[2], "| Mood:", fila[3])
 
 # AVANCE 6: Recorrer la lista (arreglo) con un ciclo 'for'
 if len(historial_recomendaciones) > 0:
